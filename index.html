@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday, Anushka! 💖</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#ffe5ec,#f8d8ff,#dff4ff);color:#4a2948;min-height:100vh;overflow-x:hidden}.wrap{max-width:900px;margin:auto;padding:28px 16px 50px}.card{background:rgba(255,255,255,.9);border-radius:28px;padding:28px;box-shadow:0 15px 45px rgba(80,30,80,.18);text-align:center;margin-bottom:20px}h1{font-size:clamp(34px,7vw,64px);margin:10px 0;color:#c52f72}h2{color:#8d3d75}.subtitle{font-size:18px}button{border:0;border-radius:999px;padding:15px 25px;font-size:17px;font-weight:700;background:#d93678;color:white;cursor:pointer;box-shadow:0 8px 20px rgba(217,54,120,.3)}button:hover{transform:translateY(-1px)}#surprise{display:none}.message{white-space:pre-line;text-align:left;line-height:1.75;font-size:17px;background:#fff6fb;padding:22px;border-radius:20px;margin:25px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.gallery img{width:100%;height:300px;object-fit:cover;border-radius:20px;box-shadow:0 7px 20px rgba(0,0,0,.14)}.love{font-size:30px;font-weight:800;color:#d12c70;margin:24px 0}.small{opacity:.75;font-size:14px}footer{text-align:center;opacity:.65;margin-top:25px}.heart{position:fixed;bottom:-30px;font-size:24px;animation:float 7s linear infinite;pointer-events:none;z-index:0}@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:1}100%{transform:translateY(-110vh) rotate(360deg);opacity:0}}@media(max-width:600px){.card{padding:20px}.gallery{grid-template-columns:1fr 1fr}.gallery img:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<div style="font-size:42px">🎂💐✨</div>
+<h1>Happy Birthday, Anushka!</h1>
+<p class="subtitle">A little surprise made especially for you 💖</p>
+<button id="open">✨ Open Your Surprise ✨</button>
+<div id="surprise">
+<div class="love">I Love You, Anushka ❤️</div>
+<div class="message">Happy Birthday, Anushka! 🎂💖
+
+Today is all about celebrating you and the happiness you bring into the lives of the people around you.
+
+I just want you to know something from my heart:
+I love you. ❤️
+
+You are a very special person to me, and I hope this new year of your life brings you countless smiles, beautiful memories, success, and all the happiness you deserve.
+
+May every new day give you another reason to smile, and may your dreams slowly become reality.
+
+Keep being the wonderful person you are. ✨
+Happy Birthday once again, Anushka! 🥳🎉
+
+With lots of love,
+Someone who cares about you ❤️</div>
+<h2>Beautiful Memories 📸</h2>
+<div class="gallery"><img src="photo1.png" alt="Birthday photo 1"><img src="photo2.png" alt="Birthday photo 2"><img src="photo3.png" alt="Birthday photo 3"></div>
+<p class="small">🎵 Your birthday song starts when the surprise is opened.</p>
+</div></div><footer>Made with ❤️ for Anushka</footer></div>
+<audio id="song" src="birthday_song.mp3" preload="auto"></audio>
+<script>
+document.getElementById("open").addEventListener("click",function(){
+document.getElementById("surprise").style.display="block";
+document.getElementById("song").play().catch(()=>{});
+this.textContent="💖 Surprise Opened 💖";this.disabled=true;
+for(let i=0;i<18;i++){let h=document.createElement("div");h.className="heart";h.textContent="❤️";h.style.left=Math.random()*100+"vw";h.style.animationDelay=Math.random()*3+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),8000)}
+document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+});
+</script>
+</body></html>
